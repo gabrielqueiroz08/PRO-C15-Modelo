@@ -51,7 +51,7 @@ function draw() {
   
   //código para reiniciar o fundo
   if(path.y > 400 ){
-    path.y = height/2;
+    path.y = height/8;
   }
   
     createCash();
@@ -69,44 +69,27 @@ function draw() {
       
     }else if(jewelryG.isTouching(boy)) {
       jewelryG.destroyEach();
-
-      // treasureCollection=+ 150;
-      // treasureCollection= 150;
-      // treasureCollection= treasureCollection - 150;
-      // treasureCollection= treasureCollection + 150;
+      treasureCollection= treasureCollection + 150;
       
     }else{
       if(swordGroup.isTouching(boy)) {
         gameState=END;
         
-        // boy.addAnimation(endImg);
-        // boy.addAnimation("SahilRunning",endImg);
-        // boy.addAnimation("SahilRunning");
-        // boy.addAnimation(SahilRunning,endImg);
+        
+         boy.addAnimation("SahilRunning",endImg);
+        
 
         boy.x=200;
         boy.y=300;
         boy.scale=0.6;
         
-        // cashG.destroyEach;
-        // diamondsG.destroyEach;
-        // jewelryG.destroyEach;
-        // swordGroup.destroyEach;
+ 
+        
+        cashG.destroyEach();
+        diamondsG.destroyEach();
+        jewelryG.destroyEach();
+        swordGroup.destroyEach();
 
-        // cashG.destroy();
-        // diamondsG.destroy();
-        // jewelryG.destroy();
-        // swordGroup.destroy();
-        
-        // cashG.destroyEach();
-        // diamondsG.destroyEach();
-        // jewelryG.destroyEach();
-        // swordGroup.destroyEach();
-        
-        // cashGdestroyEach();
-        // diamondsGdestroyEach();
-        // jewelryGdestroyEach();
-        // swordGroupdestroyEach();
         
         cashG.setVelocityYEach(0);
         diamondsG.setVelocityYEach(0);
